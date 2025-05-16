@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function () {
           cart.push({ 
     id: productId, 
     name: product.name, 
-    price: parseFloat(product.price.replace('₹', '')), // Remove ₹ symbol and convert to number
+price: parseFloat(product.price.replace(/[₹,]/g, '')),
     image: product.image, 
     quantity: quantity 
 });
