@@ -1173,7 +1173,7 @@ border:none;
  
   
 .cart-btn i{
-  margin-left: 100px;
+  margin-left: 70px;
 }
   
   /* Search Bar */
@@ -1260,9 +1260,6 @@ border:none;
   
   .footer-section {
     max-width: 180px;
-  }
-  .cart-btn{
-    margin-right: -30px;
   }
 
   
