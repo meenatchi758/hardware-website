@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Burger Queen</title>
+  <link rel="stylesheet" href="spottable.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="hero">
+    <div class="top-row">
+      <div class="top-text">Burger Queen Restaurant</div>
+      <div class="logo-section">
+        <div class="logo">
+            <img src="./images/Restaurant (48).png">
+        </div>
+        <div class="since">
+          <img src="./images/Star 8.png" alt="Star" class="icon" />
+          <p>Since 1947</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="branding">
+      <h1><span class="white">Burger</span> <span class="highight">Queen</span></h1>
+    </div>
+
+    <div class="footer-text">
+      EAT // RESTAURANT // TABLE RESERVATION // TAKE AWAY
+    </div>
+  </div>
+  <br><br>
+  <div class="hero-section">
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="buri.html" class="active">Home</a></li>
+        <li><a href="spotmenu.html">Spot Booking</a></li>
+        <li><a href="foodmenu.html">Food Menu</a></li>
+        <li><a href="burgerabout.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+  <br>
+  <div class="custom-divider"></div>
+  <br>
+
+  
+  <div class="booking">
+   <h1>Payment</h1><br><br>
+   <h4>Country</h4><br>
+   <span>India</span>
+   <h3>Book a table</h3>
+   <p>Our dining atmosphere is casual and comfortable. To reflect this environment, we maintain a formal dress.</p>
+ 
+   <div class="booking-form">
+   
+    <form id="paymentForm" onsubmit="return validatePaymentForm(event)">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Name" required>
+          <div class="date-time">
+            <div class="date">
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+      
+            <div class="time">
+              <label for="time">Time</label>
+              <div class="custom-time">
+                <input type="time" id="time" name="time" required>
+                <select id="ampm" name="ampm" required>
+                  <option value="AM">AM</option>
+                  <option value="PM">PM</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <label for="group-type" class="label">Booking for:</label><br>
+            <select id="group-type" name="group-type" required>
+              <!-- <option value="" disabled selected>Select group type</option> -->
+              <option value="family">Family</option>
+              <option value="couples">Couples</option>
+            </select>
+          </div>
+
+            <label for="cardName">Name of Card Holder</label>
+            <input type="text" id="cardName" placeholder="Name" required>
+          
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" placeholder="Enter Your Card Number" maxlength="19" required>
+          
+            <div class="date-time">
+              <div class="date">
+                <label for="expiry">Expiry</label><br>
+                <input type="text" id="expiry" placeholder="MM/YY" required>
+              </div>
+          
+              <div class="time">
+                <label for="cvv">CVV</label><br>
+                <input type="text" id="cvv" placeholder="" maxlength="3" required>
+              </div>
+            </div>
+        
+            <div class="payment-options">
+                <label><input type="radio" name="payment" value="PayPal"> PayPal</label>
+                <label><input type="radio" name="payment" value="Google Pay"> Google Pay</label>
+                <label><input type="radio" name="payment" value="PayTM"> PayTM</label>
+                <label><input type="radio" name="payment" value="Visa Card"> Visa Card</label>
+              </div>
+              
+      <button type="submit">PAY NOW</button>
+    </form>
+    </form>
+  </div>
+  <br>
+
+ 
+     <br><br><br><br><br><br><br><br><br><br>
+     <div class="energy balance">
+       <h2>Calories Energy Balance</h2><br><br>
+     </div>
+     <section class="menu">
+      
+       <div class="food-card">
+         <img src="./images/Restaurant (45).png" alt="Vegetable Stew">
+         <h3>Vegetable Stew</h3>
+         <a href="foodmenu.html"><button>View food</button></a>
+ 
+       </div>
+     
+       <div class="food-card">
+         <img src="./images/Restaurant (46).png" alt="Morning Breakfast">
+         <h3>Morning Breakfast</h3>
+         <a href="foodmenu.html"><button>View food</button></a>
+ 
+       </div>
+     
+       <div class="food-card">
+         <img src="./images/Restaurant (47).png" alt="Avocado Semiya">
+         <h3>Avocado Semiya</h3>
+        <a href="foodmenu.html"><button>View food</button></a>
+       </div>
+     </section>
+     <br><br><br>
+     <div class="banner-image">
+       <img src="./images/Restaurant (37).png">
+     </div>
+     <br><br>
+     <br><br>
+    </div><br><br><hr>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3><span class="slash">/</span>ABOUT US</h3>
+          <p>The five-star Restaurant in a beautiful Chennai city with a modern restaurant, conference-hall.</p>
+        </div>
+        <br><br>
+        <div class="footer-section">
+          <h3><span class="slash">/</span>NEWS</h3>
+          <p>Sign up to our newsletter not to miss exclusive offers and information about the upcoming events.</p>
+        </div>
+        <br>
+    
+        <div class="footer-section">
+          <h3><span class="slash">/</span>SOCIAL</h3>
+          <div class="social-links">
+            <span>FACEBOOK</span>
+            <span>INSTAGRAM</span>
+            <span>TWITTER</span>
+          </div>
+        </div>
+        </div>
+      <div class="footer-bottom">
+        <p>©2025 All rights reserved. Burger Queen</p>
+      </div>
+    </footer>
+
+<script>
+
+
+    
+
+  function validatePaymentForm() {
+  const name = document.getElementById("cardName").value.trim();
+  const cardNumber = document.getElementById("cardNumber").value.trim().replace(/\s+/g, '');
+  const expiry = document.getElementById("expiry").value.trim();
+  const cvv = document.getElementById("cvv").value.trim();
+
+  const cardNumberRegex = /^\d{16}$/;
+  const expiryRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+  const cvvRegex = /^\d{3}$/;
+
+  if (name === "") {
+    alert("Please enter the card holder's name.");
+    return false;
+  }
+
+  if (!cardNumberRegex.test(cardNumber)) {
+    alert("Please enter a valid 16-digit card number.");
+    return false;
+  }
+
+  if (!expiryRegex.test(expiry)) {
+    alert("Expiry must be in MM/YY format.");
+    return false;
+  }
+
+  if (!cvvRegex.test(cvv)) {
+    alert("Please enter a valid 3-digit CVV.");
+    return false;
+  }
+
+  // ✅ Check if any payment radio is selected
+  const paymentMethods = document.getElementsByName("payment");
+  let selectedPayment = "";
+  for (let i = 0; i < paymentMethods.length; i++) {
+    if (paymentMethods[i].checked) {
+      selectedPayment = paymentMethods[i].value;
+      break;
+    }
+  }
+
+  if (selectedPayment === "") {
+    alert("Please choose a payment mode.");
+    return false;
+  }
+  alert("Payment Successful ");
+
+  // ✅ Reset form
+  document.getElementById("paymentForm").reset();
+
+  // ✅ Redirect after short delay
+  setTimeout(() => {
+    window.location.href = "reserved.html";
+  }, 1000);
+
+  return false;
+}
+
+</script>    
+
+</div>
+
+<script>
+function validatePaymentForm(event) {
+event.preventDefault();
+clearErrors();
+
+// Get reservation details
+const name = document.getElementById('name').value.trim();
+const date = document.getElementById('date').value;
+const time = document.getElementById('time').value;
+const ampm = document.getElementById('ampm').value;
+const groupType = document.getElementById('group-type').value;
+
+
+// Get payment details
+const cardName = document.getElementById('cardName').value.trim();
+const cardNumber = document.getElementById('cardNumber').value.replace(/\s+/g, '');
+const expiry = document.getElementById('expiry').value.trim();
+const cvv = document.getElementById('cvv').value.trim();
+const paymentMethod = document.querySelector('input[name="payment"]:checked')?.value;
+
+// Validate reservation details
+if (!name) showError('name', 'Please enter your name');
+if (!date) showError('date', 'Please select a date');
+if (!time) showError('time', 'Please select a time');
+if (!groupType) showError('group-type', 'Please select group type');
+
+// Validate payment details
+if (!cardName) showError('cardName', 'Cardholder name required');
+if (!validateCardNumber(cardNumber)) showError('cardNumber', 'Invalid card number');
+if (!validateExpiry(expiry)) showError('expiry', 'Invalid expiry (MM/YY)');
+if (!validateCvv(cvv)) showError('cvv', 'Invalid CVV');
+if (!paymentMethod) showError('payment-options', 'Please select payment method');
+
+// If any errors exist, stop submission
+if (document.querySelectorAll('.error-message').length > 0) return false;
+
+// Store reservation details in localStorage
+localStorage.setItem('reserved-name', name);
+localStorage.setItem('reserved-date', formatDate(date));
+localStorage.setItem('reserved-time', `${formatTime(time)} ${ampm}`);
+localStorage.setItem('reserved-group-type', groupType);
+localStorage.setItem('reserved-group-type', groupType);
+
+// Submit form (in a real app, you would process payment here)
+alert('Payment successful! Redirecting to confirmation...');
+setTimeout(() => {
+  window.location.href = 'reserved.html';
+}, 1000);
+
+return true;
+}
+
+// Helper functions
+function validateCardNumber(cardNumber) {
+return /^\d{13,19}$/.test(cardNumber) && luhnCheck(cardNumber);
+}
+
+function validateExpiry(expiry) {
+if (!/^(0[1-9]|1[0-2])\/?([0-9]{2})$/.test(expiry)) return false;
+const [month, year] = expiry.split('/');
+const expiryDate = new Date(`20${year}`, month);
+return expiryDate > new Date();
+}
+
+function validateCvv(cvv) {
+return /^\d{3,4}$/.test(cvv);
+}
+
+function luhnCheck(cardNumber) {
+let sum = 0;
+for (let i = 0; i < cardNumber.length; i++) {
+  let digit = parseInt(cardNumber.charAt(i));
+  if (i % 2 === 0) digit *= 2;
+  if (digit > 9) digit -= 9;
+  sum += digit;
+}
+return sum % 10 === 0;
+}
+
+function formatDate(dateString) {
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+return new Date(dateString).toLocaleDateString('en-US', options);
+}
+
+function formatTime(timeString) {
+const [hours, minutes] = timeString.split(':');
+return `${hours}:${minutes}`;
+}
+
+function showError(fieldId, message) {
+const field = document.getElementById(fieldId) || 
+             document.querySelector(`[name="${fieldId}"]`) ||
+             document.querySelector(`.${fieldId}`);
+if (!field) return;
+
+const errorElement = document.createElement('div');
+errorElement.className = 'error-message';
+errorElement.textContent = message;
+errorElement.style.color = 'red';
+errorElement.style.fontSize = '0.8rem';
+
+field.parentNode.appendChild(errorElement);
+field.style.borderColor = 'red';
+}
+
+function clearErrors() {
+document.querySelectorAll('.error-message').forEach(el => el.remove());
+document.querySelectorAll('input, select').forEach(el => {
+  el.style.borderColor = '';
+});
+}
+</script>
+<script>
+function validatePaymentForm(event) {
+  event.preventDefault();
+  
+  // 1. Generate a random confirmation ID (8 alphanumeric chars)
+  const confirmationId = 'CONF-' + Math.random().toString(36).substr(2, 8).toUpperCase();
+  
+  // 2. Store ALL reservation data
+  const reservation = {
+    confirmationId: confirmationId, // Store the generated ID
+    name: document.getElementById('name').value.trim(),
+    date: document.getElementById('date').value,
+    time: document.getElementById('time').value + ' ' + document.getElementById('ampm').value,
+    groupType: document.getElementById('group-type').value,
+    paymentMethod: document.querySelector('input[name="payment"]:checked')?.value
+  };
+  
+  // 3. Debug: Check what's being stored
+  console.log("Storing reservation:", reservation);
+  
+  // 4. Store in localStorage (convert to JSON string)
+  localStorage.setItem('reservationData', JSON.stringify(reservation));
+  
+  // 5. Redirect to confirmation page
+  setTimeout(() => {
+    window.location.href = 'reserved.html';
+  }, 1000);
+}
+</script>
+<script>
+  function validatePaymentForm(event) {
+  event.preventDefault();
+  clearErrors();
+
+  // Generate confirmation ID
+  const confirmationId = 'BQ-' + Math.random().toString(36).substr(2, 8).toUpperCase();
+
+  // Store all reservation data
+  const reservation = {
+    id: confirmationId,
+    name: document.getElementById('name').value.trim(),
+    date: formatDate(document.getElementById('date').value),
+    time: document.getElementById('time').value + ' ' + document.getElementById('ampm').value,
+    groupType: document.getElementById('group-type').value,
+    paymentMethod: document.querySelector('input[name="payment"]:checked')?.value
+  };
+
+  localStorage.setItem('burgerQueenReservation', JSON.stringify(reservation));
+  
+  // Redirect
+  setTimeout(() => {
+    window.location.href = 'reserved.html';
+  }, 1000);
+}
+</script>
+
+ 
+    </body>
+  </html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Burger Queen</title>
+  <link rel="stylesheet" href="spottable.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="hero">
+    <div class="top-row">
+      <div class="top-text">Burger Queen Restaurant</div>
+      <div class="logo-section">
+        <div class="logo">
+            <img src="./images/Restaurant (48).png">
+        </div>
+        <div class="since">
+          <img src="./images/Star 8.png" alt="Star" class="icon" />
+          <p>Since 1947</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="branding">
+      <h1><span class="white">Burger</span> <span class="highight">Queen</span></h1>
+    </div>
+
+    <div class="footer-text">
+      EAT // RESTAURANT // TABLE RESERVATION // TAKE AWAY
+    </div>
+  </div>
+  <br><br>
+  <div class="hero-section">
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="buri.html" class="active">Home</a></li>
+        <li><a href="spotmenu.html">Spot Booking</a></li>
+        <li><a href="foodmenu.html">Food Menu</a></li>
+        <li><a href="burgerabout.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+  <br>
+  <div class="custom-divider"></div>
+  <br>
+  <div class="booking">
+    <h1>Your Spot Reserved !!</h1>
+  </div>
+
+  <div class="reservation-confirmation">
+  
+    <div id="reservation-details">
+
+      <p><strong>Name</strong> <span id="reservation-name"></span></p><hr>
+      <p><strong>Date</strong> <span id="reservation-date"></span></p><hr>
+      <p><strong>Confirmation ID</strong> <span id="confirmation-id"></span></p><hr>
+      <p><strong>Time</strong> <span id="reservation-time"></span></p><hr>
+      <p><strong>Booking For</strong> <span id="group-type"></span></p><hr>
+      <p><strong>Payment Method</strong> <span id="payment-method"></span></p>
+    </div>
+      
+      
+
+      <!-- <p><strong>Time</strong> <span id="reserved-time"></span></p> -->
+      <!-- <p><strong>Booking for</strong> <span id="reserved-group-type"></span></p><hr> -->
+    </div>
+ 
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Load reservation data
+          const reservation = JSON.parse(localStorage.getItem('reservationData'));
+          
+          if (reservation) {
+              // Display all details
+              document.getElementById('confirmation-id').textContent = reservation.confirmationId;
+              document.getElementById('reserved-name').textContent = reservation.name;
+              document.getElementById('reserved-date').textContent = reservation.formattedDate;
+              document.getElementById('reserved-time').textContent = reservation.formattedTime;
+              document.getElementById('reserved-group-type').textContent = reservation.groupType;
+              document.getElementById('reserved-payment-method').textContent = reservation.paymentMethod;
+          } else {
+              // Handle case where no data exists
+              document.querySelector('.confirmation-details').innerHTML = 
+                  '<p>No reservation data found. Please make a reservation first.</p>';
+          }
+      });
+  </script>
+ 
+  
+  <style>
+    .reservation-confirmation {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+#reservation-details {
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden; /* Keeps border-radius on child elements */
+}
+
+#reservation-details p {
+  margin: 0;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+
+
+.reservation-details hr {
+  margin: 0;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+#reservation-details strong {
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#reservation-details span {
+  color:white;
+  font-weight: 600;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+/* Special styling for confirmation ID */
+#confirmation-id {
+
+  color:white;
+  font-weight: 700;
+}
+
+
+  </style>
+  <div class="ched">
+    <a href="foodmenu.html" class="explore-btn">Explore food</a>
+    <a href="buri.html" class="explore-btn">Explore Home</a>
+  </div>
+   <br><br><br><br><br><br><br><br><br><br>
+   <div class="energy balance">
+     <h2>Calories Energy Balance</h2><br><br>
+   </div>
+   <section class="menu">
+    
+     <div class="food-card">
+       <img src="./images/Restaurant (45).png" alt="Vegetable Stew">
+       <h3>Vegetable Stew</h3>
+       <a href="foodmenu.html"><button>View food</button></a>
+
+     </div>
+   
+     <div class="food-card">
+       <img src="./images/Restaurant (46).png" alt="Morning Breakfast">
+       <h3>Morning Breakfast</h3>
+       <a href="foodmenu.html"><button>View food</button></a>
+
+     </div>
+   
+     <div class="food-card">
+       <img src="./images/Restaurant (47).png" alt="Avocado Semiya">
+       <h3>Avocado Semiya</h3>
+      <a href="foodmenu.html"><button>View food</button></a>
+     </div>
+   </section>
+   <br><br><br>
+   <div class="banner-image">
+     <img src="./images/Restaurant (37).png">
+   </div>
+   <br><br>
+   <br><br>
+  </div><br><br><hr>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3><span class="slash">/</span>ABOUT US</h3>
+        <p>The five-star Restaurant in a beautiful Chennai city with a modern restaurant, conference-hall.</p>
+      </div>
+      <br><br>
+      <div class="footer-section">
+        <h3><span class="slash">/</span>NEWS</h3>
+        <p>Sign up to our newsletter not to miss exclusive offers and information about the upcoming events.</p>
+      </div>
+      <br>
+  
+      <div class="footer-section">
+        <h3><span class="slash">/</span>SOCIAL</h3>
+        <div class="social-links">
+          <span>FACEBOOK</span>
+          <span>INSTAGRAM</span>
+          <span>TWITTER</span>
+        </div>
+      </div>
+      </div>
+    <div class="footer-bottom">
+      <p>©2025 All rights reserved. Burger Queen</p>
+    </div>
+  </footer>
+  
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const reservation = JSON.parse(localStorage.getItem('burgerQueenReservation'));
+  
+  if (reservation) {
+    document.getElementById('confirmation-id').textContent = reservation.id;
+    document.getElementById('reservation-name').textContent = reservation.name;
+    document.getElementById('reservation-date').textContent = reservation.date;
+    document.getElementById('reservation-time').textContent = reservation.time;
+    document.getElementById('group-type').textContent = reservation.groupType;
+    document.getElementById('payment-method').textContent = reservation.paymentMethod;
+  } else {
+    document.getElementById('reservation-details').innerHTML = 
+      '<p>No reservation found. Please start over.</p>';
+  }
+});
+</script>
+
+  
+  
+</body>
+</html>

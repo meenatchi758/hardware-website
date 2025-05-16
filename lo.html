@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burger Queen - Login</title>
+  <style>
+    :root {
+      --primary-red: #e63946;
+      --dark-red: #d00000;
+      --light-bg: #f8f9fa;
+      --text-dark: #2b2d42;
+      --text-light: #8d99ae;
+      --white: #ffffff;
+      --error: #ff4444;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url("./images/Restaurant\ \(33\).png") no-repeat center/cover;
+     
+    }
+    
+    .login-container {
+    
+      border-radius: 15px;
+    
+      padding: 40px;
+      width: 380px;
+      text-align: center;
+      animation: fadeIn 0.5s ease-out;
+ 
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-light);
+      transition: color 0.3s ease;
+    }
+    
+    .close-btn:hover {
+      color: var(--primary-red);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .welcome {
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+      color: white;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    
+    .restaurant-name {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary-red);
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      letter-spacing: -0.5px;
+    }
+    
+    .login-title {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      color: white;
+      font-weight: 600;
+      position: relative;
+    }
+    
+    .login-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--primary-red);
+      margin: 10px auto;
+      border-radius: 3px;
+    }
+    
+    .input-field {
+      margin-bottom: 25px;
+      text-align: left;
+      position: relative;
+    }
+    
+    input {
+      width: 100%;
+      padding: 14px 20px;
+      border: 2px solid #e9ecef;
+      border-radius: 8px;
+      box-sizing: border-box;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background-color: #f8f9fa;
+    }
+    
+    input:focus {
+      outline: none;
+      border-color: var(--primary-red);
+      box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
+      background-color: var(--white);
+    }
+    
+    input::placeholder {
+      color: var(--text-light);
+    }
+    
+    .error-message {
+      color: var(--error);
+      font-size: 0.8rem;
+      margin-top: 5px;
+      display: none;
+    }
+    
+    .forgot-password {
+      text-align: right;
+      margin-bottom: 30px;
+    }
+    
+    .forgot-password a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .forgot-password a:hover {
+      color: var(--primary-red);
+      text-decoration: underline;
+    }
+    
+    .login-button {
+      background-color: var(--primary-red);
+      color: white;
+      border: none;
+      padding: 14px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    
+    .login-button:hover {
+      background-color: var(--dark-red);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(214, 40, 40, 0.3);
+    }
+    
+    /* Forgot Password Modal */
+    .forgot-password-modal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--white);
+      padding: 40px;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .forgot-password-modal.active {
+      display: flex;
+      transform: translateX(0);
+    }
+    
+    .back-to-login {
+      color: var(--primary-red);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .back-to-login:hover {
+      text-decoration: underline;
+    }
+    
+    .reset-instructions {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+    
+    /* Loading spinner */
+    .spinner {
+      display: none;
+      width: 24px;
+      height: 24px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+      margin: 0 auto;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
+      .login-container {
+        width: 90%;
+        padding: 30px 20px;
+      }
+      
+      .restaurant-name {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <!-- Close button -->
+    <button class="close-btn" id="close-btn">×</button>
+    
+    <!-- Login Form -->
+    <div class="login-form">
+      <div class="welcome">Welcome to</div>
+      <div class="restaurant-name">Burger Queen</div>
+      
+      <div class="login-title">Log in Your Account</div>
+      
+      <div class="input-field">
+        <input type="email" placeholder="Email address" id="login-email">
+        <div class="error-message" id="email-error">Please enter a valid email address</div>
+      </div>
+      
+      <div class="input-field">
+        <input type="password" placeholder="Password" id="login-password">
+        <div class="error-message" id="password-error">Password must be at least 8 characters</div>
+      </div>
+      
+      <div class="forgot-password">
+        <a id="forgot-password-link">Forgot password?</a>
+      </div>
+      
+      <button class="login-button" id="login-button">
+        <span id="login-text">Log in</span>
+        <div class="spinner" id="spinner"></div>
+      </button>
+    </div>
+    
+    <!-- Forgot Password Form -->
+    <div class="forgot-password-modal" id="forgot-password-modal">
+      <div class="login-title">Reset Your Password</div>
+      <p class="reset-instructions">
+        Enter your email address and we'll send you a link to reset your password.
+      </p>
+      
+      <div class="input-field">
+        <input type="email" placeholder="Your email address" id="reset-email">
+        <div class="error-message" id="reset-email-error">Please enter a valid email address</div>
+      </div>
+      
+      <button class="login-button" id="send-reset-link">Send Reset Link</button>
+      <a class="back-to-login" id="back-to-login">← Back to login</a>
+    </div>
+  </div>
+
+  <script>
+    // DOM Elements
+    const closeBtn = document.getElementById('close-btn');
+    const forgotPasswordLink = document.getElementById('forgot-password-link');
+    const backToLogin = document.getElementById('back-to-login');
+    const forgotPasswordModal = document.getElementById('forgot-password-modal');
+    const sendResetLink = document.getElementById('send-reset-link');
+    const resetEmail = document.getElementById('reset-email');
+    const resetEmailError = document.getElementById('reset-email-error');
+    const loginButton = document.getElementById('login-button');
+    const loginEmail = document.getElementById('login-email');
+    const loginPassword = document.getElementById('login-password');
+    const emailError = document.getElementById('email-error');
+    const passwordError = document.getElementById('password-error');
+    const spinner = document.getElementById('spinner');
+    const loginText = document.getElementById('login-text');
+    
+    // Email validation regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    // Close button functionality
+    closeBtn.addEventListener('click', () => {
+      // In a real app, this might redirect to home page or close a modal
+    //   alert('Closing login form - would navigate away in a real app');
+      // window.location.href = 'index.html'; // Uncomment to actually redirect
+    });
+    
+    // Show forgot password modal
+    forgotPasswordLink.addEventListener('click', () => {
+      forgotPasswordModal.classList.add('active');
+    });
+    
+    // Hide forgot password modal
+    backToLogin.addEventListener('click', () => {
+      forgotPasswordModal.classList.remove('active');
+    });
+    
+    // Validate email format
+    function validateEmail(email) {
+      return emailRegex.test(email);
+    }
+    
+    // Validate password length
+    function validatePassword(password) {
+      return password.length >= 8;
+    }
+    
+    // Handle password reset
+    sendResetLink.addEventListener('click', () => {
+      if(!resetEmail.value) {
+        resetEmailError.style.display = 'block';
+        resetEmail.focus();
+        return;
+      }
+      
+      if(!validateEmail(resetEmail.value)) {
+        resetEmailError.style.display = 'block';
+        resetEmail.focus();
+        return;
+      }
+      
+      resetEmailError.style.display = 'none';
+      
+      alert(`Password reset link sent to ${resetEmail.value}`);
+      forgotPasswordModal.classList.remove('active');
+      resetEmail.value = '';
+    });
+    
+    // Handle login - redirect to spotmenu.html
+    loginButton.addEventListener('click', () => {
+      // Reset error messages
+      emailError.style.display = 'none';
+      passwordError.style.display = 'none';
+      
+      // Validate inputs
+      let isValid = true;
+      
+      if(!loginEmail.value) {
+        emailError.textContent = 'Email is required';
+        emailError.style.display = 'block';
+        isValid = false;
+      } else if(!validateEmail(loginEmail.value)) {
+        emailError.textContent = 'Please enter a valid email';
+        emailError.style.display = 'block';
+        isValid = false;
+      }
+      
+      if(!loginPassword.value) {
+        passwordError.textContent = 'Password is required';
+        passwordError.style.display = 'block';
+        isValid = false;
+      } else if(!validatePassword(loginPassword.value)) {
+        passwordError.textContent = 'Password must be at least 8 characters';
+        passwordError.style.display = 'block';
+        isValid = false;
+      }
+      
+      if(!isValid) return;
+      
+      // Show loading spinner
+      loginText.style.display = 'none';
+      spinner.style.display = 'block';
+      
+      // Simulate login process (in real app, this would be an API call)
+      setTimeout(() => {
+        // Redirect to spotmenu.html after successful login
+        window.location.href = 'spotmenu.html';
+      }, 1500);
+    });
+    closeBtn.addEventListener('click', () => {
+      window.location.href = 'buri.html'; // Redirects to home page
+    });
+    
+    // Real-time validation for email
+    loginEmail.addEventListener('input', () => {
+      if(validateEmail(loginEmail.value)) {
+        emailError.style.display = 'none';
+      }
+    });
+    
+    // Real-time validation for password
+    loginPassword.addEventListener('input', () => {
+      if(validatePassword(loginPassword.value)) {
+        passwordError.style.display = 'none';
+      }
+    });
+    
+    // Real-time validation for reset email
+    resetEmail.addEventListener('input', () => {
+      if(validateEmail(resetEmail.value)) {
+        resetEmailError.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

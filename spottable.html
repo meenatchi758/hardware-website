@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Burger Queen</title>
+  <link rel="stylesheet" href="spottable.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="hero">
+    <div class="top-row">
+      <div class="top-text">Burger Queen Restaurant</div>
+      <div class="logo-section">
+        <div class="logo">
+            <img src="./images/Restaurant (48).png">
+        </div>
+        <div class="since">
+          <img src="./images/Star 8.png" alt="Star" class="icon" />
+          <p>Since 1947</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="branding">
+      <h1><span class="white">Burger</span> <span class="highight">Queen</span></h1>
+    </div>
+
+    <div class="footer-text">
+      EAT // RESTAURANT // TABLE RESERVATION // TAKE AWAY
+    </div>
+  </div>
+  <br><br>
+  <div class="hero-section">
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="buri.html" class="active">Home</a></li>
+        <li><a href="spotmenu.html">Spot Booking</a></li>
+        <li><a href="foodmenu.html">Food Menu</a></li>
+        <li><a href="burgerabout.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+  <br>
+  <div class="custom-divider"></div>
+  <br>
+  <div class="booking">
+    <h1>Restaurant booking</h1>
+  </div><br><br><br><br>
+  <div class="container">
+    <h1 class="title">Opening Hours</h1><br><br>
+
+    <div class="row">
+      <div class="day">
+        <span class="highlight1">MON</span>DAY
+      </div>
+      <div class="status closed">CLOSED</div>
+    </div>
+
+    <div class="row">
+      <div class="day">
+        <span class="highlight1">TUES</span>DAY
+        <span class="dash">—</span>
+        <span class="highlight1">FRI</span>DAY
+      </div>
+      <div class="status">10 am - 8 pm</div>
+    </div>
+
+    <div class="row">
+      <div class="day">
+        <span class="highlight1">SATUR</span>DAY
+        <span class="dash">—</span>
+        <span class="highlight1">SUN</span>DAY
+      </div>
+      <div class="status">7 am - 8 pm</div>
+    </div>
+  </div>
+ <br><br><br><br><br><br><br><br>
+ <div class="booking">
+  <h1>Booking</h1><br><br><br>
+  <h3>Book a table</h3>
+  <p>Our dining atmosphere is casual and comfortable. To reflect this environment, we maintain a formal dress.</p>
+
+  <div class="booking-form">
+    <form action="spotbook.html" method="get">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Name" required>
+  
+      <label for="guests">Number of guests</label>
+      <input type="number" id="guests" name="guests" min="1" placeholder="0" required>
+  
+      <div class="date-time">
+        <div class="date">
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+  
+        <div class="time">
+          <label for="time">Time</label>
+          <input type="time" id="time" name="time" required>
+        </div>
+      </div>
+  
+      <a href="spotbook.html"> <button type="submit">BOOK A TABLE</button></a>
+    </form>
+  </div>
+  
+  <script>
+    function generateID() {
+      // Generate a random ID for the booking
+      const uniqueID = `#${Math.floor(Math.random() * 10000) + 1}`;
+
+      // Add the unique ID to the form's action URL
+      const form = document.querySelector("form");
+      const url = new URL(form.action);
+      url.searchParams.append("id", uniqueID); // Add the ID to the URL query string
+      form.action = url.toString();  // Update the action URL with the ID
+    }
+  </script>
+    <br><br><br><br><br><br><br><br><br><br>
+    <div class="energy balance">
+      <h2>Calories Energy Balance</h2><br><br>
+    </div>
+    <section class="menu">
+     
+      <div class="food-card">
+        <img src="./images/Restaurant (45).png" alt="Vegetable Stew">
+        <h3>Vegetable Stew</h3>
+        <a href="foodmenu.html"><button>View food</button></a>
+
+      </div>
+    
+      <div class="food-card">
+        <img src="./images/Restaurant (46).png" alt="Morning Breakfast">
+        <h3>Morning Breakfast</h3>
+        <a href="foodmenu.html"><button>View food</button></a>
+
+      </div>
+    
+      <div class="food-card">
+        <img src="./images/Restaurant (47).png" alt="Avocado Semiya">
+        <h3>Avocado Semiya</h3>
+       <a href="foodmenu.html"><button>View food</button></a>
+      </div>
+    </section>
+    <br><br><br>
+    <div class="banner-image">
+      <img src="./images/Restaurant (37).png">
+    </div>
+    <br><br>
+    <br><br>
+    <div class="burger">
+    <img src="./images/Group 4629.png">
+    </div><br><br><hr>
+  
+     
+     
+      
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3><span class="slash">/</span>ABOUT US</h3>
+          <fig>The five-star Restaurant in a beautiful Chennai city with a modern restaurant, conference-hall.</fig>
+        </div>
+        <br><br>
+        <div class="footer-section">
+          <h3><span class="slash">/</span>NEWS</h3>
+          <fig>Sign up to our newsletter not to miss exclusive offers and information about the upcoming events.</fig>
+        </div>
+        <br>
+    
+        <div class="footer-section">
+          <h3><span class="slash">/</span>SOCIAL</h3>
+          <div class="social-links">
+            <fig>FACEBOOK</fig>
+            <fig>INSTAGRAM</fig>
+            <fig>TWITTER</fig>
+          </div>
+        </div>
+      </div>
+      
+    
+      <div class="footer-bottom">
+        <p>©2025 All rights reserved. Burger Queen</p>
+      </div>
+    </footer>
+    </body>
+  </html>
+      
+    

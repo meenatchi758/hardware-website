@@ -1,0 +1,1414 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family:   'Poppins';
+    padding: 3rem;
+  }
+  
+  /* Container */
+  .hero {
+    max-width: 1200px;
+    margin: auto;
+ 
+  }
+  
+  /* Top row */
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  
+  .top-text {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  /* Logo + Since */
+  .logo-section {
+    display: flex;
+    flex-direction: column; */
+    align-items: flex-end;
+    gap: 3em; */
+    margin-left: 50px;;
+   
+  }
+  
+  .logo {
+  
+    margin-top: 70px;
+  }
+  .logo img {
+    margin-left:40px;
+
+  }
+  
+  .since {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 250px;
+    height: 70px;
+ 
+    border: 1px solid white;
+    border-radius: 999px;
+    background-color: transparent;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-left:40px;
+  }
+  
+  .since p {
+    margin: 0;
+    white-space: nowrap;
+    font-size: 20px;;
+  }
+  
+  .since img {
+    width: 40px;
+       object-fit: contain;
+  }
+  
+  
+  
+  /* Branding */
+  .branding {
+   display: flex;
+    margin-top:-10px;
+  }
+  
+  .branding h1 {
+    font-size: 130px;
+   letter-spacing: 7px;
+   font-family: poppins;
+  
+  }
+  
+  .white {
+    color: white;
+  }
+  
+  .highlight {
+    color: #f5c93b;
+  }
+  
+ 
+  .footer-text {
+    color: #f5c93b;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 15px;;
+  }
+  .hero-section {
+    margin:60px;
+    background: url('./images/Restaurant\ \(31\).png') no-repeat center center/cover;
+    height: 100vh;
+    width:1240px;
+    position: relative;
+    border:1px solid #4a473f;
+  }
+  
+ 
+  .nav-bar {
+    position: absolute;
+    bottom: 28px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    background:rgb(96, 94, 94);
+    
+   
+    border-radius: 50px;
+    width:850px;
+    height:90px;
+    justify-content: center;
+    
+      display: flex;
+      align-items: center;
+   
+    
+  }
+  
+  .nav-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-bar a {
+    text-decoration: none;
+    color: white;
+   
+      padding: 10px 30px;
+      font-size: 23px;
+      font-weight: 400;
+  
+    border-radius: 30px;
+    transition: 0.3s ease;
+  }
+  
+  
+  
+  .nav-bar a:hover {
+    background: black;
+    color: white;
+  }
+  .custom-divider {
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1220px;
+    margin: 40px auto; 
+  }
+  .chef-section {
+    display: flex;
+    width: 100%;
+    height: 98vh;
+    background-color: black;
+    color: #000;
+  }
+  
+  .chef-image {
+    flex: 1.5;
+    background: url('./images/Restaurant\ \(36\).png') no-repeat center center/cover;
+  }
+  
+  .chef-content {
+    flex: 1;
+    background-color: #e7e7e7;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .chef-content h1 {
+   
+    margin:20px;
+    font-size: 55px;
+   
+    letter-spacing: 3px;
+ l
+    
+  }
+  
+  .chef-content fig {
+    font-size: 35px;
+    margin:20px;
+    margin-bottom: 20px;
+    margin-top:-10px;
+    word-spacing:3px;
+  }
+  
+  .chef-content p {
+    font-size: 20px;
+    line-height: 1.7;
+ margin-top:20px;
+    margin:20px;
+    color: #444;
+  }
+  
+  .explore-btn {
+    padding: 20px 50px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+   
+margin-left: 150px;
+   
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    margin-top:40px;
+    width: fit-content;
+    transition: background 0.3s;
+  }
+  
+  .explore-btn:hover {
+    background-color: #333;
+    cursor: pointer;
+  }
+  .special-recipes {
+    background-color: black;
+    color: white;
+    padding: 50px 30px;
+   
+  }
+  
+  .text-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+   
+  }
+  
+  .text-content h1 {
+ 
+    font-size: 70px;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+  .sub-heading p {
+    text-align: right;
+    font-size: 2.2rem;
+margin-top: -80px;
+  }
+  
+  .icon-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 60px;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .food-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:100px;
+    background-color: #000;
+    position: relative;
+  }
+  
+  .food-card {
+
+    padding: 4px;
+    border-radius: 20px;
+    width: 350px;
+    text-align: center;
+
+    position: relative;
+  }
+  
+  .food-card:hover {
+
+  }
+  
+  .food-card:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -50px;
+    border-radius:100px;
+    height: 45%;
+    width: 8px;
+    background-color: #444;
+
+  }
+  .icon{
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon img {
+   
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .food-card image{
+    background-color: red;
+  }
+  .food-card.red .icon {
+    background-color: #8B0000; 
+  }
+  
+  .food-card.yellow .icon{
+    background-color: #DAA520; 
+  }
+  
+  .food-card.green .icon {
+    background-color: #00B300; 
+  }
+
+  
+
+  
+  .food-card h2 {
+    margin-bottom: 10px;
+    color: white;
+    font-size:30px;
+    text-transform: capitalize;
+  }
+  
+  .food-card p {
+    font-size: 23px;
+    line-height: 1.5;
+    text-align: left;
+    color:grey;
+  }
+  .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    margin: 40px 0;
+  }
+  
+  .section-title .line {
+    width:800px;
+    height: 10px;
+    background: white;
+
+    border-radius: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 70px;
+    font-weight: 600;
+    background: linear-gradient(to right, #ccc, #555);
+    color:white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .location-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+  }
+  
+  .location-img img {
+    width: 700px;
+    height: auto;
+    outline: 1px solid #444;
+  
+  }
+  
+  .location-content {
+    max-width: 1000px;
+  
+    color:white;
+  }
+  
+  .location-content h2 {
+    font-size:50px;
+   text-align: center;
+  margin-top:40px;
+  }
+  
+  .location-content p {
+    font-size: 13px;
+    line-height: 2.6;
+    padding:30px;
+  }
+  .locate-section {
+    padding: 30px;
+
+  }
+  
+  .locate-container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    gap: 70px;
+  }
+  
+  .locate-content {
+    /* flex: 1; */
+    min-width: 600px;
+    color: #000000;
+  }
+  
+  .locate-content h2 {
+    font-size:50px;
+    text-align: center;
+   margin-top: -80px;;
+   color:white;
+  }
+  
+  .locate-content p {
+    font-size: 13px;
+    line-height: 2.6;
+    margin-left:30px;
+  
+  
+    color:white;
+  }
+  
+  .locate-img {
+    flex: 1;
+    min-width: 620px;
+    text-align: center;
+  
+  }
+  
+  .locate-img img {
+    max-width: 100%;
+  
+  border:1px solid#444;
+  }
+  .offers {
+    background-color: black;
+    color: white;
+    padding: 40px;
+    font-family: sans-serif;
+  }
+  
+  .title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .line {
+    flex: 1;
+    height: 2px;
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  .title-row h2 {
+    font-size: 3rem;
+    color: white;
+    margin: 0 20px;
+  }
+  
+  .discount {
+    font-size: 3rem;
+ margin-top: -20px;
+    text-align: right;
+  }
+  
+  .red {
+    color: red;
+  }
+  .offer-card {
+    display: flex;
+    background-color: #000;
+    color: white;
+    padding: 30px;
+    gap: 30px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+  }
+  
+  .food-img {
+     margin-top: 20px;;
+    width: 280px;
+    height: 220px;
+   
+ 
+  
+  }
+  
+  .offer-details {
+    flex: 1;
+    display: flex;
+    margin:50px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color:  #00B300;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+  
+  .price-btn {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    gap: 12px;
+  }
+  
+  .old-price {
+    color: red;
+    text-decoration: line-through;
+    font-size: 20px;
+  }
+  
+  .new-price {
+    font-size: 20px;
+    color: white;
+  }
+  
+  .view-btn {
+    background-color: #00B300;
+    color: white;
+   width:230px;
+   height:50px;
+    font-size: 20px;
+    border: none;
+    margin-top: 100px;;
+ 
+    cursor: pointer;
+
+  }
+  
+  .view-btn:hover {
+    background-color: #218838;
+  }
+  
+  .description  {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+  font-weight: 400;
+    max-width: 440px;
+  }
+  .login-signup {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #b71c1c; /* Burger Queen red from screenshot */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .login-signup:hover {
+    background-color: #b71c1c; /* Darker red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .login-signup:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  }
+  
+  .footer {
+    background-color: #000;
+    color: #d1d1d1;
+    padding: 30px 40px 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+  
+    gap: 100px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+  }
+  
+  .footer-section h3 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  
+  .slash {
+    color: #ffc107;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .footer-section p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #d1d1d1;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 40px;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 10px;
+  }
+  
+  .footer-bottom {
+    text-align: left;
+    font-size: 13px;
+    margin-top: 40px;
+    color: #777;
+  }
+  .burger {
+    display: flex;
+    justify-content: flex-end;
+  }
+  hr {
+    border: none;
+    height: 2px;
+    background-color:#777; 
+    margin: 20px 0;
+    opacity: 0.3; 
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    body{
+      overflow-x: hidden;
+    }
+ 
+    .hero {
+      width: 1200px;
+      margin: auto;
+   
+    }
+    .top-row {
+      display: flex;
+    
+      margin-bottom: 3rem;
+    }   
+    .top-text {
+      font-weight: 300;
+      font-size: 20px;
+    }
+    
+    .since {
+
+      margin-left:30px;
+    }
+
+    .hero-section {
+      margin:30px;
+      width:1150px;
+      height:100vh;
+  
+    }
+    
+   
+    .branding h1 {
+      font-size: 3rem; 
+      letter-spacing: 2px;
+    }
+  
+    .logo img {
+      width: 140px; 
+    }
+  
+    .since {
+      width: 190px;
+      height: 52px;
+      font-size: 0.95rem;
+    }
+  
+    .since p {
+      font-size: 15px;
+    }
+  
+    .since img {
+      width: 28px;
+    }
+  
+    .footer-text {
+      font-size: 0.85rem;
+    }
+    .custom-divider {
+   
+    /* width: 1480px;
+      margin: 30px auto;  */
+      display: none;
+
+    }
+    .chef-section {
+   
+      width: 1170px;
+      margin: 20px;
+      height: 95vh;
+    }
+    .chef-image {
+      flex: 1;
+      background: url('./images/Restaurant\ \(36\).png') no-repeat center center/cover;
+    }
+    .special-recipes {
+      width:1150px;
+     
+    }
+    .food-container {
+   width:1370px;
+      gap:80px;
+      margin-left:-70px;
+    }
+    .location-container {
+   margin:10px;
+   width:1250px;
+  
+    }
+    
+    .location-img img {
+      width: 680px;
+      margin-left:10px; 
+    }
+  
+    
+    .locate-container {
+      display: flex;
+      justify-content:center;
+      align-items: center;
+  
+      gap: 70px;
+    }
+    
+    .locate-content {
+      /* flex: 1; */
+      min-width:1300px;
+    
+    }
+    .locate-content h2 {
+     margin-left: 790px;
+    }
+    .locate-content p {
+      padding-left:880px;
+    }
+    .locate-img {
+      flex: 1;
+      min-width: 680px;
+    }
+    
+    .line{
+      display: none;
+    }
+    .section-title{
+      width:800px;
+      font-size: 40px;;
+    }
+    
+    .title-row h2 {
+      font-size: 3rem;
+      color: white;
+    
+    }
+    
+    .discount {
+      font-size: 50px;
+   margin-top: -40px;
+  width:1100px;
+     
+    }
+    
+    .red {
+      color: red;
+    }
+    .offer-card {
+      display: flex;
+      background-color: #000;
+      color: white;
+      padding: 30px;
+      gap: 30px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+    }
+    
+    .food-img {
+       margin-top: 20px;;
+      width: 280px;
+      height: 320px;
+     
+   
+    
+    }
+    
+    .offer-details {
+      flex: 1;
+      display: flex;
+      margin:50px;
+      width:1430px;
+   
+    }
+    
+    .top-row {
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .title {
+      font-size: 30px;
+      margin-left:50px;;
+      width:400px;
+    }
+    
+    .dot {
+    display: none;
+    }
+    
+    .price-btn {
+      display: flex;
+      gap: 12px;
+    }
+    
+    .old-price {
+      margin-right: 250px;
+      color: red;
+      text-decoration: line-through;
+      font-size: 20px;
+    }
+    
+    .new-price {
+      margin-left: -200px;
+      font-size: 20px;
+      color: white;
+    }
+    
+    .view-btn {
+      background-color: #00B300;
+      color: white;
+     width:700px;
+     height:250px;
+      font-size: 20px;
+      border: none;
+      margin-top: 100px;;
+   
+      cursor: pointer;
+      display: none;
+  
+    }
+    
+    .view-btn:hover {
+      background-color: #218838;
+    }
+    
+    .description  {
+      margin: 10px;
+      font-size: 15px;
+      line-height: 1.5;
+    font-weight: 400;
+      max-width: 440px;
+    }
+    .footer-container {
+    
+      gap: 60px;
+    }
+    .burger {
+     
+  display: none;
+    }
+    hr{
+      width:1100px;
+    }
+    .footer-bottom {
+      width:400px;
+    }
+  }
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+    body {
+      overflow-x: hidden;
+    }
+    .hero {
+      width: 1200px;
+      margin: auto;
+   
+    }
+    .top-row {
+      display: flex;
+    
+      margin-bottom: 3rem;
+    }   
+    .top-text {
+      font-weight: 300;
+      margin-left: 70px;
+      font-size: 20px;
+    }
+    
+    .since {
+
+      margin-left:30px;
+    }
+
+    .hero-section {
+      margin:30px;
+      width:1290px;
+      height:100vh;
+  
+    }
+    
+   
+    .branding h1 {
+      font-size: 3rem; 
+      letter-spacing: 2px;
+    }
+  
+    .logo img {
+      width: 150px; 
+    }
+  
+    .since {
+      width: 190px;
+      height: 52px;
+      font-size: 0.95rem;
+    }
+  
+    .since p {
+      font-size: 15px;
+    }
+  
+    .since img {
+      width: 28px;
+    }
+  
+    .footer-text {
+      font-size: 0.85rem;
+    }
+    .custom-divider {
+   
+   display: none;
+   
+
+    }
+    .chef-section {
+   
+      width: 1290px;
+      margin: 30px;
+      height: 98vh;
+    }
+    .chef-image {
+      flex: 1;
+      background: url('./images/Restaurant\ \(36\).png') no-repeat center center/cover;
+    }
+    .special-recipes {
+      width:1220px;
+     
+    }
+    .food-container {
+   width:1490px;
+      gap:80px;
+      margin-left:-70px;
+    }
+    .location-container {
+   margin:10px;
+   width:1250px;
+  
+    }
+    
+    .location-img img {
+      width: 680px;
+      margin-left:10px; 
+    }
+  
+    
+    .locate-container {
+      display: flex;
+      justify-content:center;
+      align-items: center;
+  
+      gap: 70px;
+    }
+    
+    .locate-content {
+      /* flex: 1; */
+      min-width:1300px;
+    
+    }
+    .locate-content h2 {
+     margin-left: 590px;
+    }
+    .locate-content p {
+      padding-left:720px;
+    }
+    .locate-img {
+      flex: 1;
+      min-width: 600px;
+    }
+    
+    .line{
+      display: none;
+    }
+    .section-title{
+      width:800px;
+      font-size: 40px;;
+    }
+    
+    .title-row h2 {
+      font-size: 3rem;
+      color: white;
+    
+    }
+    
+    .discount {
+      font-size: 50px;
+   margin-top: -40px;
+  width:1300px;
+     
+    }
+    
+    .red {
+      color: red;
+    }
+    .offer-card {
+      display: flex;
+      background-color: #000;
+      color: white;
+      padding: 30px;
+      gap: 30px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+    }
+    
+    .food-img {
+       margin-top: 20px;;
+      width: 280px;
+      height: 320px;
+     
+   
+    
+    }
+    
+    .offer-details {
+      flex: 1;
+      display: flex;
+      margin:50px;
+      width:1430px;
+   
+    }
+    
+    .top-row {
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .title {
+      font-size: 30px;
+      margin-left:50px;;
+      width:400px;
+    }
+    
+    .dot {
+    display: none;
+    }
+    
+    .price-btn {
+      display: flex;
+      gap: 12px;
+    }
+    
+    .old-price {
+      margin-right: 250px;
+      color: red;
+      text-decoration: line-through;
+      font-size: 20px;
+    }
+    
+    .new-price {
+      margin-left: -200px;
+      font-size: 20px;
+      color: white;
+    }
+    
+    .view-btn {
+    
+      display: none;
+  
+    }
+    
+    .view-btn:hover {
+      background-color: #218838;
+    }
+    
+    .description  {
+      margin: 10px;
+      font-size: 15px;
+      line-height: 1.5;
+    font-weight: 400;
+      max-width: 520px;
+    }
+    .footer-container {
+    
+      gap: 80px;
+    }
+    .burger {
+display: none;
+    }
+    hr{
+      width:1300px;
+    }
+    .footer-bottom {
+      width:400px;
+    }
+  }
+   
+  @media (min-width: 769px) and (max-width: 1024px) {
+
+    body {
+      overflow-x: hidden;
+    }
+    .hero {
+      width: 1300px;
+      margin: auto;
+   
+    }
+    .top-row {
+      display: flex;
+    
+      margin-bottom: 3rem;
+    }   
+    .top-text {
+      font-weight: 300;
+      margin-left: 70px;
+      font-size: 20px;
+    }
+    
+    .since {
+
+      margin-left:30px;
+    }
+
+    .hero-section {
+      margin:10px;
+      width:1350px;
+      height:100vh;
+  
+    }
+    
+   
+    .branding h1 {
+      font-size: 3rem; 
+      letter-spacing: 2px;
+    }
+  
+    .logo img {
+      width: 150px; 
+    }
+  
+    .since {
+      width: 190px;
+      height: 52px;
+      font-size: 0.95rem;
+    }
+  
+    .since p {
+      font-size: 15px;
+    }
+  
+    .since img {
+      width: 28px;
+    }
+  
+    .footer-text {
+      font-size: 0.85rem;
+    }
+    .custom-divider {
+   
+   display: none;
+   
+
+    }
+    .chef-section {
+   
+      width: 1350px;
+      margin: 30px;
+      height: 95vh;
+    }
+    .chef-image {
+      flex: 1;
+      background: url('./images/Restaurant\ \(36\).png') no-repeat center center/cover;
+    }
+    .special-recipes {
+      width:1250px;
+     
+    }
+    .food-container {
+   width:1520px;
+      gap:80px;
+      margin-left:-70px;
+    }
+    .location-container {
+   margin:10px;
+   width:1300px;
+  
+    }
+    
+    .location-img img {
+      width: 680px;
+      margin-left:10px; 
+    }
+  
+    
+    .locate-container {
+      display: flex;
+      justify-content:center;
+      align-items: center;
+  
+      gap: 70px;
+    }
+    
+    .locate-content {
+      /* flex: 1; */
+      min-width:1350px;
+    
+    }
+    .locate-content h2 {
+     margin-left: 590px;
+    }
+    .locate-content p {
+      padding-left:600px;
+    }
+    .locate-img {
+      flex: 1;
+      min-width: 600px;
+    }
+    
+    .line{
+      display: none;
+    }
+    .section-title{
+      width:800px;
+      font-size: 40px;;
+    }
+    
+    .title-row h2 {
+      font-size: 3rem;
+      color: white;
+    
+    }
+    
+    .discount {
+      font-size: 50px;
+   margin-top: -40px;
+  width:1300px;
+     
+    }
+    
+    .red {
+      color: red;
+    }
+    .offer-card {
+      display: flex;
+      background-color: #000;
+      color: white;
+      padding: 30px;
+      gap: 30px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+    }
+    
+    .food-img {
+       margin-top: 20px;;
+      width: 280px;
+      height: 320px;
+     
+   
+    
+    }
+    
+    .offer-details {
+      flex: 1;
+      display: flex;
+      margin:50px;
+      width:1430px;
+   
+    }
+    
+    .top-row {
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .title {
+      font-size: 30px;
+      margin-left:50px;;
+      width:400px;
+    }
+    
+    .dot {
+    display: none;
+    }
+    
+    .price-btn {
+      display: flex;
+      gap: 12px;
+    }
+    
+    .old-price {
+      margin-right: 250px;
+      color: red;
+      text-decoration: line-through;
+      font-size: 20px;
+    }
+    
+    .new-price {
+      margin-left: -200px;
+      font-size: 20px;
+      color: white;
+    }
+    
+    .view-btn {
+    
+      display: none;
+  
+    }
+    
+    .view-btn:hover {
+      background-color: #218838;
+    }
+    
+    .description  {
+      margin: 10px;
+      font-size: 15px;
+      line-height: 1.5;
+    font-weight: 400;
+      max-width: 520px;
+    }
+    .footer-container {
+    
+      gap: 80px;
+    }
+    .burger {
+display: none;
+    }
+    hr{
+      width:1300px;
+    }
+    .footer-bottom {
+      width:400px;
+    }
+  }
+  
+  
+  
+
+  
+  
